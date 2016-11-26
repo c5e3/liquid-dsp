@@ -48,7 +48,8 @@ DSP library (NOTE: if you chose to clone the repository, you will need
 to also run the additional `./bootstrap.sh` script before configuring):
 
     $ ./bootstrap.sh     # <- only if you cloned the Git repo
-    $ ./configure
+    $ CFLAGS="-march=native"
+    $ ./configure --enable-fftoverride
     $ make
     $ sudo make install
 
