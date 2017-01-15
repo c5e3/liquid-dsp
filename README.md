@@ -46,7 +46,12 @@ There are two primary ways of obtaining the source code:
 Once you have obtained a copy of the source code, you can now build the
 DSP library (NOTE: if you chose to clone the repository, you will need
 to also run the additional `./bootstrap.sh` script before configuring):
-
+```
+edit the makefile
+change the CONFIG_CFLAGS line and add -msse3 (CONFIG_CFLAGS = -g -O2 -msse3)
+save the file and NOT rerun ./configure
+run make (now will work :+1: )
+```
     $ ./bootstrap.sh     # <- only if you cloned the Git repo
     $ CFLAGS="-march=native"
     $ ./configure --enable-fftoverride
